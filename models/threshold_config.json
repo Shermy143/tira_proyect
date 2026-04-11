@@ -1,5 +1,0 @@
-{
-    "optimal_threshold": 0.5,
-    "metric": "f1_macro",
-    "model_name": "StyleDistance/mStyleDistance"
-}
