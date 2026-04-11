@@ -25,4 +25,4 @@ ENV TOKENIZERS_PARALLELISM=false
 ENV HF_HUB_OFFLINE=1
 
 # ---- Punto de entrada TIRA (shell form para expandir $inputDataset y $outputDir) ----
-ENTRYPOINT ["python3", "/app/run.py", "-i", "$inputDataset", "-o", "$outputDir"]
+ENTRYPOINT ["python3", "/app/run.py", "--model_path", "/root/.cache/huggingface/hub/models--Doffy143--mStyleDistance-Finetunningv2/snapshots/6e61470abe58b6b5652881469dc480dc98700fee/", "-i", "$inputDataset", "-o", "$outputDir"]
