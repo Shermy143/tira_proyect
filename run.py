@@ -84,7 +84,7 @@ if __name__ == "__main__":
     parser.add_argument("input_pos", type=str, nargs='?', help="Ruta de entrada manual")
     parser.add_argument("output_pos", type=str, nargs='?', help="Ruta de salida manual")
     
-    parser.add_argument("--model_path", type=str, default="Doffy143/mStyleDistance-Finetunningv2", help="Ruta al modelo")
+    parser.add_argument("--model_path", type=str, default="/app/model", help="Ruta al modelo")
     
     args = parser.parse_args()
     
