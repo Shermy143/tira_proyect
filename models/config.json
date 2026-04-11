@@ -1,0 +1,37 @@
+{
+  "TRAIN_PATH": "/content/drive/MyDrive/PAN2026/dataset/train.jsonl",
+  "VAL_PATH": "/content/drive/MyDrive/PAN2026/dataset/val.jsonl",
+  "TEST_PATH": "/content/drive/MyDrive/PAN2026/dataset/test.jsonl",
+  "OUTPUT_DIR": "/content/drive/MyDrive/PAN2026/full_finetuning/results_v2_best_corregidoOK/",
+  "MODEL_NAME": "StyleDistance/mStyleDistance",
+  "MAX_LENGTH": 256,
+  "BATCH_SIZE": 16,
+  "LEARNING_RATE": 1e-05,
+  "EPOCHS": 6,
+  "WARMUP_RATIO": 0.1,
+  "DROPOUT": 0.3,
+  "WEIGHT_DECAY": 0.01,
+  "GRADIENT_CLIP": 1.0,
+  "GRAD_ACCUM_STEPS": 4,
+  "model_type": "xlm-roberta",
+  "LABEL_SMOOTHING": 0.1,
+  "PATIENCE": 2,
+  "MIN_DELTA": 0.001,
+  "BALANCING_METHOD": "genre_stratified_weights",
+  "USE_AUGMENTATION": true,
+  "AUG_RATIO": 0.15,
+  "AUG_RATIO_NEWS": 0.25,
+  "AUG_GENRES": [
+    "essays",
+    "news"
+  ],
+  "AUG_TECHNIQUES": [
+    "delete",
+    "sentence_shuffle",
+    "truncate"
+  ],
+  "OPTIMIZE_THRESHOLD": true,
+  "THRESHOLD_METRIC": "f1_macro",
+  "SEED": 42,
+  "USE_AMP": false
+}
