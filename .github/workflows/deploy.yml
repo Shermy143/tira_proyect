@@ -20,11 +20,11 @@ jobs:
       - name: Set up Dependencies
         uses: actions/setup-python@v4
         with:
-          python-version: 3.11
+          python-version: 3.12
       - name: Install required python packages
         run: |
           python -m pip install --upgrade pip
-          pip3 install tira hugginface_hub
+          pip3 install tira hugginface-hub
       - name: Build, test, and upload image
         run: |
           echo "Ejecutando code-submission..."
