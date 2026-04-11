@@ -24,10 +24,12 @@ jobs:
       - name: Install required python packages
         run: |
           python -m pip install --upgrade pip
-          pip3 install tira hugginface-cli
+          pip3 install tira hugginface
       - name: Build, test, and upload image
         run: |
           echo "Ejecutando code-submission..."
+          echo "Download model"
+          hf download Doffy143/mStyleDistance-Finetunningv2
           
           echo "Iniciando autentificacion en TIRA..."
           tira-cli login --token ${{ secrets.TIRA_CLIENT_TOKEN }}
