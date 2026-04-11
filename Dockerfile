@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # ---- Dependencias Python ----
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt && rm -rf /root/.cache/pip
+RUN pip install --no-cache-dir -r requirements.txt --break-system-packages && rm -rf /root/.cache/pip
 
 # ---- Código fuente y modelo ----
 COPY data_loader.py .
