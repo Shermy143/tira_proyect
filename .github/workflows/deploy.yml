@@ -1,8 +1,5 @@
 name: Upload Software to TIRA
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
     inputs:
       directory:
@@ -16,8 +13,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          lfs: true
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
       - name: Set up Docker Buildx
@@ -29,7 +24,7 @@ jobs:
       - name: Install required python packages
         run: |
           python -m pip install --upgrade pip
-          pip3 install tira
+          pip3 install tira hugginface-cli
       - name: Build, test, and upload image
         run: |
           echo "Ejecutando code-submission..."
@@ -39,6 +34,6 @@ jobs:
           
           echo "Login exitoso. Verificando instalacion..."
           tira-cli verify-installation
-          
+
           echo "Verificacion completada. Iniciando la subida del container a TIRA (PANCLEF 2026)..."
-          tira-cli code-submission --path "${{ inputs.directory || '.' }}" --task generative-ai-authorship-verification-panclef-2026 --dataset pan26-generative-ai-detection-smoke-test-20260330-training --tira-vm-id codingmates
+          tira-cli code-submission --path "${{ inputs.directory || '.' }}" --mount-hf-model Doffy143/mStyleDistance-Finetunningv2 --task generative-ai-authorship-verification-panclef-2026 --dataset pan26-generative-ai-detection-smoke-test-20260330-training --tira-vm-id codingmates
