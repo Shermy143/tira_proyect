@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     g++ \
     git \
     python3 \
-    python3-pip
+    python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
 # ---- Dependencias Python ----
