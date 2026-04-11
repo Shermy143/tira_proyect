@@ -22,6 +22,7 @@ COPY run.py        .
 # ---- Variables de entorno ----
 ENV PYTHONUNBUFFERED=1
 ENV TOKENIZERS_PARALLELISM=false
+ENV HF_HUB_OFFLINE=1
 
 # ---- Punto de entrada TIRA (shell form para expandir $inputDataset y $outputDir) ----
 ENTRYPOINT ["python3", "/app/run.py", "-i", "$inputDataset", "-o", "$outputDir"]
