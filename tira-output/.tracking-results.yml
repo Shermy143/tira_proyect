@@ -1,0 +1,29 @@
+schema version: 0.2
+platform:
+  hardware:
+    cpu:
+      frequency: {"max": 0, "min": 0, "avg": 0, "timeseries": {"timestamps": ["1ms", "101ms"], "values": [0, 0]}}
+    gpu:
+  operating system:
+  software:
+implementation:
+  executable:
+  source:
+    lang: null
+resources:
+  runtime:
+    start time: "2026-04-14T02:10:48.575426976+0000"
+    stop time: "2026-04-14T02:10:48.683620570+0000"
+    wallclock: 108 ms
+    user: 0 ms
+    system: 0 ms
+  cpu:
+    used process: {"max": 0, "min": 0, "avg": 0, "timeseries": {"timestamps": ["1ms", "101ms"], "values": [0, 0]}}
+    used system: {"max": 100, "min": 0, "avg": 0, "timeseries": {"timestamps": ["1ms", "101ms"], "values": [100, 2]}}
+    energy used system: 0 J
+  gpu:
+    energy used system: 0 J
+  ram:
+    used process: {"max": 5242, "min": 0, "avg": 0, "timeseries": {"timestamps": ["1ms", "101ms"], "values": [5242, 5242]}}
+    used system: {"max": 982, "min": 0, "avg": 0, "timeseries": {"timestamps": ["1ms", "101ms"], "values": [981, 982]}}
+    energy used system: 0 J
